@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+HOme
+{% endblock %}
+
+{% block content %}
+    <h1>ToDoList</h1>
+    <ul class="list-group">
+        {% for item in ls%}
+        <a href = "/{{item.id}}" class="text-decoration-none"><li class="list-group-item">{{item.name}}</li></a>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
